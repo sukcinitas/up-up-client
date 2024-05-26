@@ -4,7 +4,7 @@ import path from 'path';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import webpack from 'webpack';
+import Dotenv from 'dotenv-webpack';
 
 export default {
   entry: './src/index.tsx',
@@ -25,9 +25,10 @@ export default {
       filename: '[name].[contentHash].css',
     }),
     new HtmlWebpackPlugin({ template: 'template.html' }),
-    new webpack.DefinePlugin({
-      process: {env: {}}
-    })
+    new Dotenv({
+      path: './.env',
+      safe: true,
+    }),
   ],
   module: {
     rules: [
