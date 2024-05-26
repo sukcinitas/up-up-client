@@ -9,7 +9,7 @@ import { fetchUser } from './store/reducers/usersSlice';
 axios.defaults.withCredentials = true;
 
 if (!window.location.href.includes('localhost')) {
-  axios.defaults.baseURL = process.env.REACT_APP_ORIGIN;
+  axios.defaults.baseURL = process?.env?.REACT_APP_ORIGIN;
 }
 
 const renderApp = async () => {
