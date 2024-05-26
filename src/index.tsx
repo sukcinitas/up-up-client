@@ -8,8 +8,8 @@ import store from './store';
 import { fetchUser } from './store/reducers/usersSlice';
 axios.defaults.withCredentials = true;
 
-if (!window.location.href.includes('localhost')) {
-  axios.defaults.baseURL = process?.env?.REACT_APP_ORIGIN;
+if (!(window.location.href.includes('localhost'))) {
+  axios.defaults.baseURL = process?.env?.REACT_APP_ORIGIN || "https://up-up.onrender.com/";
 }
 
 const renderApp = async () => {

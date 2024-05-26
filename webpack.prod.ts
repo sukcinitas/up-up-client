@@ -27,7 +27,7 @@ export default {
     new HtmlWebpackPlugin({ template: 'template.html' }),
     new Dotenv({
       path: './.env',
-      safe: true,
+      safe: false,
     }),
   ],
   module: {
