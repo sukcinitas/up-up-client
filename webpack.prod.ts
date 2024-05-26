@@ -7,7 +7,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
   entry: './src/index.tsx',
-  mode: 'production', // configures DefinePlugin by default since v4
+  mode: 'production',
   output: {
     filename: 'main.[contentHash].js',
     path: path.resolve(__dirname, 'dist'),
