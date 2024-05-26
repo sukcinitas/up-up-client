@@ -2,7 +2,7 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
-  entry: './src/client/index.tsx',
+  entry: './src/index.tsx',
   mode: 'development',
   output: {
     filename: 'main.js',
@@ -19,10 +19,6 @@ export default {
     proxy: [{
       context: ['/api'],
       target: 'http://localhost:8080/', 
-      // '/api/*': {
-      //   target: 'http://localhost:8080/',
-      //   secure: false,
-      // },
     }],
   },
   module: {

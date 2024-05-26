@@ -6,7 +6,7 @@ import CssMinimizerPlugin from 'css-minimizer-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
 export default {
-  entry: './src/client/index.tsx',
+  entry: './src/index.tsx',
   mode: 'production', // configures DefinePlugin by default since v4
   output: {
     filename: 'main.[contentHash].js',
